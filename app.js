@@ -9,7 +9,7 @@ const paper_div = document.getElementById("p");
 const scissors_div = document.getElementById("s");
 
 function game(userChoice) {
-    console.log("💩💩💩    " + userChoice);
+    console.log("you picked    " + userChoice);
 }
 
 function main() {
