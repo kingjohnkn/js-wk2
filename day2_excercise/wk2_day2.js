@@ -18,8 +18,8 @@ function sumNumbers(num) {
     // calculate the sum of the numbers in the array
     
     let sumMyArray = 0;
-    // calculate the length of the array
-    lengthMyArray = myArray.length
+    // store the length of the array in a variable
+    let lengthMyArray = myArray.length
 
     for (i = 0; i < lengthMyArray; i++) {
         sumMyArray = sumMyArray + myArray[i];
