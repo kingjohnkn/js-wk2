@@ -28,4 +28,21 @@ function sumNumbers(num) {
     console.log(`Numbers divisible by 3 and 5 between 1 and ${num}: \n${myArray} \nand their sum is ${sumMyArray}`);
 }
 
-sumNumbers(15);
+let number = prompt("Enter a number: ");
+
+while (true) {
+    if (number == 0) {
+        number = prompt(`Please enter a number greater than zero`);
+    } else if (number < 0) {
+        number = prompt(`${number} is not valid! \nEnter a number greater than zero.`);
+    } else if (number === null) {
+        break;
+    } else if (!Number.isInteger(Number(number)) && !isNaN(number)) {
+        number = prompt(`${number} is a float! \nEnter a whole number.`);
+    } else if (!isNaN(number)) {
+        sumNumbers(number);
+        break;
+    } else {
+        number = prompt(`${number} is not a number! \nEnter a number.`);
+    }
+}
