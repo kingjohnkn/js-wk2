@@ -30,19 +30,26 @@ function sumNumbers(num) {
 
 let number = prompt("Enter a number: ");
 
+// check for valid user input
 while (true) {
     if (number == 0) {
+        // number not zero
         number = prompt(`Please enter a number greater than zero`);
     } else if (number < 0) {
+        // number not less than zero
         number = prompt(`${number} is not valid! \nEnter a number greater than zero.`);
     } else if (number === null) {
+        // not empty
         break;
     } else if (!Number.isInteger(Number(number)) && !isNaN(number)) {
+        // number is not a float
         number = prompt(`${number} is a float! \nEnter a whole number.`);
     } else if (!isNaN(number)) {
+        // run main when everything checks
         sumNumbers(number);
         break;
     } else {
+        // number is not a number
         number = prompt(`${number} is not a number! \nEnter a number.`);
     }
 }
